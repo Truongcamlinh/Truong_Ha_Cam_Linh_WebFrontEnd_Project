@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý lịch tập</title>
+    <link rel="stylesheet" href="../assets/css/booking.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">GYM MANAGEMENT</div>
+            <ul class="nav-links">
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Lịch tập</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="header-container">
+            <h2 class="header-title">Quản lý lịch tập</h2>
+            <button class="btn-primary" id="btnAddSchedule">Đặt lịch mới</button>
+        </div>
+        
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Lớp học</th>
+                    <th>Ngày tập</th>
+                    <th>Khung giờ</th>
+                    <th>Họ tên</th>
+                    <th>Email</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody id="scheduleList"></tbody>
+        </table>
+
+        <div id="pagination"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 GYM Management</p>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Đặt lịch mới</h3>
+            <form id="scheduleForm">
+                <label for="class">Lớp học:</label>
+                <select id="class">
+                    <option>Gym</option>
+                    <option>Yoga</option>
+                    <option>Zumba</option>
+                </select>
+
+                <label for="date">Ngày tập:</label>
+                <input type="date" id="date">
+
+                <label for="timeSlot">Khung giờ</label>
+                <select id="timeSlot">
+                    <option value="06:00 - 09:00">06:00 - 09:00</option>
+                    <option value="09:00 - 12:00">09:00 - 12:00</option>
+                    <option value="12:00 - 15:00">12:00 - 15:00</option>
+                    <option value="15:00 - 18:00">15:00 - 18:00</option>
+                    <option value="18:00 - 21:00">18:00 - 21:00</option>
+                </select>
+                
+
+                <label for="name">Họ tên:</label>
+                <input type="text" id="name">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email">
+
+                <button type="submit" class="btn-primary">Lưu</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../assets/js/Booking.js"></script>
+</body>
+</html>

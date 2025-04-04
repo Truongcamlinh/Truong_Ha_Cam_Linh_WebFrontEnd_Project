@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/register.css" />
+  </head>
+  <body>
+    <div class="container" id="registerContainer">
+      <h2>Đăng Nhập Tài Khoản</h2>
+      <form id="registerForm">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" />
+          <p class="error" id="emailError"></p>
+        </div>
+        <div class="form-group">
+          <label for="password">Mật khẩu:</label>
+          <input type="password" id="password" />
+          <p class="error" id="passwordError"></p>
+        </div>
+        <button type="submit">Đăng Nhập</button>
+      </form>
+      <p class="toggle" onclick="toggleForms()">
+       <div class="new-pass"> <a href="forgot-password.html">Quên mật khẩu?</a></div>
+        <br />
+        <div class="log-in"> Chưa có tài khoản? <a href="./register.HTML">Đăng Ký Ngay</a></div>
+      </p>
+    </div>
+
+    <div class="error-mess">
+      <div class="header">
+        <div class="fram">
+          <img src="../assets/img/Vector.png" alt="" />
+          <span>Error</span>
+        </div>
+        <div class="close-btn"></div>
+      </div>
+      <div class="content">
+        Mật khẩu hoặc Email không đúng<br />
+        không được bỏ trống
+      </div>
+    </div>
+    <div class="success-mess">
+      <div class="icon-succes"></div>
+      <div class="content-succes">Đăng nhập thành công</div>
+    </div>
+    <script src="../assets/js/login.js"></script>
+  </body>
+</html>
