@@ -70,7 +70,8 @@ h2 {
 }
 #registerForm{
   margin: 20px 0;
-}.error-mess {
+}
+.error-mess {
   position: fixed;
   top: 26px;
   left: 22px;

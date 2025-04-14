@@ -1,0 +1,35 @@
+
+  .header-add {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7f9fc;
+    padding: 16px 24px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .header-add h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  #btnAddService {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+  }
+  
+  #btnAddService:hover {
+    background-color: #2563eb;
+  }
+  
+  

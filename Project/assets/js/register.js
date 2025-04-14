@@ -4,24 +4,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const emailInput = document.getElementById("email");
     const passwordInput = document.getElementById("password");
     const confirmPasswordInput = document.getElementById("confirmPassword");
-
     const successMess = document.querySelector(".success-mess");
     const errorMess = document.querySelector(".error-mess");
     const errorContent = document.querySelector(".error-mess .content");
-
     registerForm.addEventListener("submit", function (event) {
         event.preventDefault();
-
         let fullname = fullnameInput.value.trim();
         let email = emailInput.value.trim();
         let password = passwordInput.value.trim();
         let confirmPassword = confirmPasswordInput.value.trim();
-
         let fullnameError = document.getElementById("fullnameError");
         let emailError = document.getElementById("emailError");
         let passwordError = document.getElementById("passwordError");
         let confirmPasswordError = document.getElementById("confirmPasswordError");
-
         let isValid = true;
         if (fullname === "") {
             fullnameError.textContent = "Họ và tên không được để trống";
@@ -47,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             confirmPasswordError.textContent = "";
         }
-
         if (isValid) {
             const user = {
                 fullname: fullname,
@@ -56,16 +50,13 @@ document.addEventListener("DOMContentLoaded", function () {
             };
             localStorage.setItem("user", JSON.stringify(user));
             successMess.style.display = "flex";
-
             setTimeout(() => {
                 successMess.style.display = "none";
                 window.location.href = "./login.html"; 
             }, 2000);
         } else {
-            
             errorContent.textContent = "Vui lòng điền đầy đủ và đúng thông tin!";
             errorMess.style.display = "flex";
-
             setTimeout(() => {
                 errorMess.style.display = "none";
             }, 2000);
